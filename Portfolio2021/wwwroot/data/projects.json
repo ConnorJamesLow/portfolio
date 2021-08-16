@@ -1,0 +1,54 @@
+[
+    {
+        "key": "p:moshoboga",
+        "colors": "bg-gradient-to-r from-purple-500 to-green-300",
+        "dates": {
+            "ongoing": true,
+            "from": "2020/12/01",
+            "to": "2021/08/01"
+        },
+        "description": "Our team (Efinity Technologies) is developing a social movie site for rating, reviewing, and recommending movies. We utilized the .NET Platform for this project, leveraging Blazor Server and SignalR for a highly interactive experience.",
+        "featured": true,
+        "highlights": [
+            "Co-architect during the initial project specification and estimate.",
+            "Primary developer responsible for ensuring all features were implemented on time.",
+            "Delegated tasks our junior team member and reviewed their code for quality.",
+            "Utilized GitHub for collaboration between developers, designers, and our client (via GitHub issues)."
+        ],
+        "link": "https://www.moshoboga.com",
+        "role": "Lead Developer",
+        "stack": [
+            ".NET",
+            "Blazor",
+            "TypeScript",
+            "SQL Server"
+        ],
+        "summary": "\"Movie recommendations by those who like what you like.\"",
+        "title": "Moshoboga"
+    },
+    {
+        "key": "p:ifs",
+        "colors": "bg-gradient-to-r from-[#0069D9] to-[#032d59e6]",
+        "dates": {
+            "from": "2018/06/01",
+            "to": "2021/06/01"
+        },
+        "description": "Lead developer/designer for a web application for International Field Services' business. Supports several sets of users: company administrators, field agents, and clients.",
+        "featured": true,
+        "highlights": [
+            "Lead developer for an EfinityTech project.",
+            "Built a business-critical web application using ASP.NET Core MVC and JavaScript.",
+            "Implemented JWT security to compliment an asynchronous client experience made possible through RESTful Web Services.",
+            "Utilized the jQuery library to develop a responsive and interactive front-end. Developed important backend features including PDF generation and Email notifications. Managed SQL databases with Microsoft SQL Server."
+        ],
+        "role": "Lead Developer",
+        "stack": [
+            ".NET",
+            "ASP.NET MVC 5",
+            "JavaScript",
+            "SQL Server"
+        ],
+        "summary": "Business Management Web Application",
+        "title": "IFS"
+    }
+]

@@ -1,0 +1,57 @@
+@if (Item is null)
+{
+	<section class="card w-full">
+		<div class="card-content">
+			<div class="ellipsisLoader">
+				<span class="ellipsisLoader-dot"></span>
+				<span class="ellipsisLoader-dot"></span>
+				<span class="ellipsisLoader-dot"></span>
+			</div>
+		</div>
+	</section>
+	return;
+}
+
+<section class="card overflow-hidden w-full hover:bg-white hover:shadow-xl transition" @key="@Model" id="project-@Model.Key">
+	<header class="card-header">
+		<div class="flex justify-between items-center">
+			<h1 class="text-left text-2xl">@Model.Title</h1>
+			@if (Model.Link is not null)
+			{
+				<a href="@Model.Link" target="_blank"
+			   class="flex h-7 hover:bg-primary-100 hover:text-primary-800 items-center justify-center rounded-full text-black/60 text-sm w-7">
+					<i class="bi bi-box-arrow-up-right"></i>
+				</a>
+			}
+		</div>
+		<div class="flex justify-between items-center text-black/60">
+			<div class="">
+				@if (Model.Dates is not null)
+				{
+					<span>@(Model.Dates.ToSimpleDate())</span>
+				}
+			</div>
+			<div>
+				@Model.Role
+			</div>
+		</div>
+	</header>
+	<div class="card-content">
+		<span class="inline-block leading-none">
+			@(Model.Summary ?? "")
+		</span>
+		<div class="h-28 sm:h-24 overflow-ellipsis overflow-hidden text-black/60 leading-tight relative">
+			@(Model.Description ?? "")
+			<div class="absolute w-full h-12 bottom-0 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+			@*<ul class="list-disc list-outside pl-[2ch] mx-0.5">
+				@foreach (var item in Model.Highlights)
+				{
+				<li>@item</li>
+				}
+				</ul>*@
+		</div>
+	</div>
+	<div class="relative">
+		<div class="absolute bottom-0 w-full h-1.5 @(Model.Colors)"></div>
+	</div>
+</section>

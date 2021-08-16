@@ -1,0 +1,58 @@
+<section class="card overflow-hidden flex flex-col sm:flex-row max-w-xl w-full m-auto sm:h-72 transition-transform"
+         @ref="CardElement">
+    <div class="m-auto sm:m-0 pt-6 sm:pt-0 rounded-full transition">
+        <div class="sm:h-full rounded-full sm:ring-0 ring-[10px] ring-primary-200 transition">
+            <div class="w-48 h-48 sm:w-64 sm:h-full rounded-full sm:rounded-none bg-cover bg-center sm:ring-0 ring-4 ring-primary-400 transition" style="background-image: url('/portrait.jpg');"></div>
+        </div>
+    </div>
+    <div class="card-content flex flex-col flex-1">
+
+        <header class="text-center sm:text-left">
+            <h1 class="text-4xl text-black mb-2">Connor Low</h1>
+            <div class="text-black/60">Software Engineer</div>
+            <span class="flex flex-row justify-center items-center sm:justify-start flex-1 text-primary-600">
+                <i class="bi bi-envelope mr-[0.5ch]"></i>
+                <a href="mailto:connorjameslow@gmail.com">connorjameslow@gmail.com</a>
+            </span>
+            <div class="flex flex-row sm:flex-col flex-row justify-center">
+                <a href="https://github.com/ConnorJamesLow"
+                   target="_blank"
+                   class="flex flex-row justify-center items-center sm:justify-start text-primary-600 hover:underline h-8 w-8 mobile:hover:bg-primary-600 mobile:hover:text-white rounded sm:h-auto sm:w-auto transition-colors">
+                    <i class="bi bi-github sm:mr-[0.5ch] mobile:text-base"></i>
+                    <span class="hidden sm:inline-block">GitHub</span>
+                    <i class="bi bi-box-arrow-up-right text-xs px-0.5 opacity-0 reveal transition hidden sm:inline-block"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/connorjameslow/"
+                   target="_blank"
+                   class="flex flex-row justify-center items-center sm:justify-start text-primary-600 hover:underline h-8 w-8 mobile:hover:bg-primary-600 mobile:hover:text-white rounded sm:h-auto sm:w-auto transition-colors">
+                    <i class="bi bi-linkedin sm:mr-[0.5ch] mobile:text-base"></i>
+                    <span class="hidden sm:inline-block">LinkedIn</span>
+                    <i class="bi bi-box-arrow-up-right text-xs px-0.5 opacity-0 reveal transition hidden sm:inline-block"></i>
+                </a>
+            </div>
+        </header>
+
+        <hr class="my-2 mx-1 w-auto" />
+
+        <footer class="mt-auto">
+            <div class="flex flex-col sm:flex-row sm:space-x-2 text-black/60 mt-2">
+                <div class="flex items-center space-x-[2ch] justify-center">
+                    <span class="flex flex-col items-center justify-center sm:flex-row flex-1 hover:text-indigo-600 transition-colors">
+                        <i class="bi bi-stack sm:mr-[0.5ch]"></i>
+                        <span>.NET</span>
+                    </span>
+                    <span class="flex flex-col items-center justify-center sm:flex-row flex-1 hover:text-cyan-600 transition-colors">
+                        <i class="bi bi-globe sm:mr-[0.5ch]"></i>
+                        <span>Typescript</span>
+                    </span>
+                    <span class="flex flex-col items-center justify-center sm:flex-row flex-1 hover:text-amber-600 transition-colors">
+                        <i class="bi bi-server sm:mr-[0.5ch]"></i>
+                        <span class="min-w-max">SQL Server</span>
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</section>
+

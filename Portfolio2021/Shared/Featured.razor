@@ -1,0 +1,26 @@
+@if (IsEmpty)
+{
+    <section class="flex">
+    </section>
+    return;
+}
+
+@if (Projects is null)
+{
+    <section class="flex">
+        <div class="ellipsisLoader mx-auto my-8">
+            <span class="ellipsisLoader-dot"></span>
+            <span class="ellipsisLoader-dot"></span>
+            <span class="ellipsisLoader-dot"></span>
+        </div>
+    </section>
+    return;
+}
+
+<article class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mt-4 mobile:max-w-xl w-full">
+    @foreach (Project project in Projects)
+    {
+        <ProjectItem Item="project" />
+    }
+</article>
+

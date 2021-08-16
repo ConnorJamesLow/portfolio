@@ -1,0 +1,29 @@
+{
+  "name": "portfolio.2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:webpack": "webpack -d eval-cheap-source-map -w --mode development",
+    "dev:jit": "cross-env TAILWIND_MODE=watch npx postcss ./wwwsrc/index.css -o ./wwwroot/dist/site.css --env development -w --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.6",
+    "autoprefixer": "^10.3.1",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.7",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
+  }
+}

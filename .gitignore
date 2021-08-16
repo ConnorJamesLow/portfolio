@@ -1,0 +1,6 @@
+.vs*/
+Portfolio.2021-preview6/
+bin
+obj
+node_modules
+Portfolio2021/wwwroot/dist/

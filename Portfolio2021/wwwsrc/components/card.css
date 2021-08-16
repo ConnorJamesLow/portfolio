@@ -1,0 +1,24 @@
+.card {
+    @apply shadow-md rounded-lg;
+}
+
+.card-content {
+    @apply p-4;
+}
+
+.card-header, 
+.card-footer {
+    @apply px-4;
+}
+
+.card-header {
+    @apply pt-4 rounded-t-lg;
+}
+
+.card-footer {
+    @apply pb-4 rounded-b-lg;
+}
+
+:where(.card) {
+    @apply bg-white dark:bg-black;
+}
