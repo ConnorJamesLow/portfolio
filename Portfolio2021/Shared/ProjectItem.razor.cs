@@ -28,4 +28,16 @@ public partial class ProjectItem
     public Project Model => Item ?? throw new ArgumentNullException(nameof(Item));
     #endregion
 
+    #region State
+    private Tog IsActive { get; set; } = new();
+    #endregion
+
+    private void Open()
+	{
+        if(IsActive)
+		{
+            return;
+		}
+        IsActive.Toggle();
+	}
 }

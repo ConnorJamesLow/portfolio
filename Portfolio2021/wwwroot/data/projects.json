@@ -1,7 +1,7 @@
 [
     {
         "key": "p:moshoboga",
-        "colors": "bg-gradient-to-r from-purple-500 to-green-300",
+        "colors": "from-purple-500 to-green-300",
         "dates": {
             "ongoing": true,
             "from": "2020/12/01",
@@ -13,10 +13,11 @@
             "Co-architect during the initial project specification and estimate.",
             "Primary developer responsible for ensuring all features were implemented on time.",
             "Delegated tasks our junior team member and reviewed their code for quality.",
-            "Utilized GitHub for collaboration between developers, designers, and our client (via GitHub issues)."
+            "Utilized GitHub for collaboration between developers, designers, and our client (via GitHub issues).",
+            "Added real-time features, like user-to-user chat, using SignalR."
         ],
         "link": "https://www.moshoboga.com",
-        "role": "Lead Developer",
+        "role": "Developer/Co-Architect",
         "stack": [
             ".NET",
             "Blazor",
@@ -27,8 +28,34 @@
         "title": "Moshoboga"
     },
     {
+        "key": "p:pharmasalmanac",
+        "colors": "from-[#F58426] via-amber-400 to-[#04dca2]",
+        "dates": {
+            "from": "2020/06/01",
+            "to": "2021/07/01"
+        },
+        "description": "Authored several features in an ongoing project for Pharama's Almanac. We support their HubSpot based website with an ASP.NET Core API.",
+        "featured": true,
+        "highlights": [
+            "Significantly increased performance of report-generation endpoints within the .NET Core API.",
+            "Extended the database and API to service new features for Pharama's Almanac in conjunction with a dynamic HTML/JS-based survey to gather said information.",
+            "In HubSpot, created new tools for administators to manage company data/surveys."
+        ],
+        "link": "https://www.pharmasalmanac.com/",
+        "role": "Lead Developer",
+        "stack": [
+            ".NET",
+            "ASP.NET Core",
+            "JavaScript",
+            "SQL Server",
+            "HubSpot"
+        ],
+        "summary": "Backend/Administrative Upgrades",
+        "title": "Nice Upgrades"
+    },
+    {
         "key": "p:ifs",
-        "colors": "bg-gradient-to-r from-[#0069D9] to-[#032d59e6]",
+        "colors": "from-[#0069D9] to-[#032d59e6]",
         "dates": {
             "from": "2018/06/01",
             "to": "2021/06/01"

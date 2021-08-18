@@ -20,7 +20,7 @@
 <article class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mt-4 mobile:max-w-xl w-full">
     @foreach (Project project in Projects)
     {
-        <ProjectItem Item="project" />
+        <ProjectItem Item="project" @key="@project" />
     }
 </article>
 

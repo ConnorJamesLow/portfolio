@@ -25,13 +25,13 @@
 }
 
 .shuffleLoader-dot:nth-child(3)::after {
-    @apply bg-amber-500;
-    @apply dark:bg-amber-700;
+    @apply bg-orange-500;
+    @apply dark:bg-red-700;
 }
 
 .shuffleLoader-dot:nth-child(4)::after {
-    @apply bg-green-500;
-    @apply dark:bg-green-700;
+    @apply bg-amber-500;
+    @apply dark:bg-amber-700;
 }
 
 .shuffleLoader-dot:nth-child(1) {
