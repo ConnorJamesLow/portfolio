@@ -1,22 +1,44 @@
 ﻿@inherits LayoutComponentBase
-
 <header class="fixed h-14 top-0 w-full bg-white shadow z-30">
-    <div class="flex justify-between items-center w-full py-2 px-4 h-full">
-        <div class="flex flex-1 justify-center space-x-2 items-center">
-            <div class="logo grid grid-cols-2 gap-2">
-                <div class="h-2 w-2 bg-indigo-500 rounded-lg"></div>
-                <div class="h-2 w-2 bg-pink-500 rounded-lg"></div>
-                <div class="h-2 w-2 bg-amber-500 rounded-lg"></div>
-                <div class="h-2 w-2 bg-orange-500 rounded-lg"></div>
-            </div>
-        </div>
-       @* <div>
-            <h1 class="text-2xl leading-none display">Low</h1>
-        </div>
-        <div class="flex-1"></div>*@
-    </div>
-    <div class="h-1 w-full bg-gradient-to-l from-primary-600 via-pink-500 to-amber-500 shadow"></div>
+	<div class="flex justify-between items-center w-full py-2 px-4 h-full">
+		<div class="flex flex-1 justify-center space-x-2 items-center">
+			<div class="logo grid grid-cols-2 gap-2">
+				<div class="h-2 w-2 bg-indigo-500 rounded-lg"></div>
+				<div class="h-2 w-2 bg-pink-500 rounded-lg"></div>
+				<div class="h-2 w-2 bg-amber-500 rounded-lg"></div>
+				<div class="h-2 w-2 bg-orange-500 rounded-lg"></div>
+			</div>
+		</div>
+		@* <div>
+			<h1 class="text-2xl leading-none display">Low</h1>
+			</div>
+			<div class="flex-1"></div>*@
+	</div>
+	@if (State.Current is null || !Navigator.ToBaseRelativePath(Navigator.Uri).StartsWith("Project/", StringComparison.OrdinalIgnoreCase))
+	{
+		<div class="h-1.5 w-full bg-gradient-to-l from-primary-600 via-pink-500 to-amber-500 shadow"></div>
+	}
+	else
+	{
+		<div class="h-1.5 w-full bg-gradient-to-r @State.Current.Colors shadow"></div>
+	}
 </header>
-<main class="h-[100vh] w-[100vw] overflow-x-hidden relative bg-gray-50 pt-14">
-    @Body
+<main class="h-[100vh] w-[100vw] overflow-hidden relative bg-gray-50 pt-14">
+	<div class="content overflow-y-auto overflow-x-hidden">
+		@if (State.HasInitialized)
+		{
+			@Body
+		}
+		else
+		{
+			<div class="flex w-full h-[100vh] justify-center items-center">
+				<div class="shuffleLoader">
+					<span class="shuffleLoader-dot"></span>
+					<span class="shuffleLoader-dot"></span>
+					<span class="shuffleLoader-dot"></span>
+					<span class="shuffleLoader-dot"></span>
+				</div>
+			</div>
+		}
+	</div>
 </main>

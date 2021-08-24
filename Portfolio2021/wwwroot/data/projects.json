@@ -34,7 +34,7 @@
             "from": "2020/06/01",
             "to": "2021/07/01"
         },
-        "description": "Authored several features in an ongoing project for Pharama's Almanac. We support their HubSpot based website with an ASP.NET Core API.",
+        "description": "Authored several features for HubSpot hosted pharmasalmanac.com, including a custom dynamic survey linked directly to an existing API. Refactored existing endpoints for a significant performance increase.",
         "featured": true,
         "highlights": [
             "Significantly increased performance of report-generation endpoints within the .NET Core API.",
@@ -51,7 +51,27 @@
             "HubSpot"
         ],
         "summary": "Backend/Administrative Upgrades",
-        "title": "Nice Upgrades"
+        "title": "Pharma's Almanac Upgrades"
+    },
+    {
+        "key": "p:daa",
+        "colors": "from-black to-[#fb1e20] via-indigo-700",
+        "dates": {
+            "from": "2020/03/01",
+            "to": "2020/12/01"
+        },
+        "description": "Retrofitted an existing database with a new .NET Core API server and a secured Svelte-powered SPA.",
+        "featured": true,
+        "highlights": [],
+        "role": "Lead Developer",
+        "stack": [
+            ".NET",
+            "Svelte",
+            "TypeScript",
+            "SQL Server"
+        ],
+        "summary": "Backend-focused Website Overhaul",
+        "title": "Dramatic Artists Backend"
     },
     {
         "key": "p:ifs",
@@ -60,7 +80,7 @@
             "from": "2018/06/01",
             "to": "2021/06/01"
         },
-        "description": "Lead developer/designer for a web application for International Field Services' business. Supports several sets of users: company administrators, field agents, and clients.",
+        "description": "Primary developer on a custom business-management application featuring secure logins, google-maps integration, pdf generation, email, uploading, and AJAX-powered interactivity.",
         "featured": true,
         "highlights": [
             "Lead developer for an EfinityTech project.",
@@ -76,6 +96,28 @@
             "SQL Server"
         ],
         "summary": "Business Management Web Application",
-        "title": "IFS"
+        "title": "International Field Services"
+    },
+    {
+        "key": "p:vsm",
+        "colors": "from-blue-600 to-cyan-600",
+        "dates": {
+            "ongoing": true,
+            "from": "2018/05/01"
+        },
+        "description": "Ongoing maintenance & development of Efinity Technology's internal website management platform, built on ASP.NET (Webforms & Core).",
+        "featured": true,
+        "highlights": [
+
+        ],
+        "role": "Maintainer",
+        "stack": [
+            "ASP.NET Webforms",
+            "Vue.JS",
+            "JavaScript",
+            "SQL Server"
+        ],
+        "summary": "Proprietary Software Contributor",
+        "title": "Virtual Site Manager Upgrades"
     }
 ]

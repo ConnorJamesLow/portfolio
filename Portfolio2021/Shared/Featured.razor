@@ -1,26 +1,46 @@
 @if (IsEmpty)
 {
-    <section class="flex">
-    </section>
-    return;
+	<section class="flex">
+	</section>
+	return;
 }
 
 @if (Projects is null)
 {
-    <section class="flex">
-        <div class="ellipsisLoader mx-auto my-8">
-            <span class="ellipsisLoader-dot"></span>
-            <span class="ellipsisLoader-dot"></span>
-            <span class="ellipsisLoader-dot"></span>
-        </div>
-    </section>
-    return;
+	<section class="flex">
+		<div class="ellipsisLoader mx-auto my-8">
+			<span class="ellipsisLoader-dot"></span>
+			<span class="ellipsisLoader-dot"></span>
+			<span class="ellipsisLoader-dot"></span>
+		</div>
+	</section>
+	return;
 }
 
-<article class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mt-4 mobile:max-w-xl w-full">
-    @foreach (Project project in Projects)
-    {
-        <ProjectItem Item="project" @key="@project" />
-    }
+<article class="flex flex-col space-y-8 my-8">
+	<section>
+		<h1 class="text-4xl text-black/60">Notable Work</h1>
+		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mt-4 mobile:max-w-xl w-full">
+			@foreach (Project project in Projects)
+			{
+				<ProjectItem Item="project" @key="@project" />
+			}
+		</div>
+	</section>
+	<section>
+		<h1 class="text-4xl text-black/60">Technologies & Tools</h1>
+		<div class="grid grid-cols-2 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 gap-2 mt-4 mobile:max-w-xl w-full mobile:text-xs">
+			@foreach (Technology technology in Technologies)
+			{
+				string css = technology.Proficiency is Proficiencies.FLUENT ? "bg-primary-600" 
+					: (technology.Proficiency is Proficiencies.CONVERSATIONAL ? "bg-rose-600" : "bg-orange-700");
+
+				<div class="tech flex mobile:flex-col sm:space-x-[2ch] justify-center sm:items-center px-6 py-2 rounded-full w-full @css text-white/75">
+					<h1 class="font-semibold text-white">@technology.Title</h1>
+					<span>@technology.Years years</span>
+				</div>
+			}
+		</div>
+	</section>
 </article>
 

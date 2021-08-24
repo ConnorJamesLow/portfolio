@@ -1,3 +1,8 @@
 a:hover > i.reveal {
     opacity: 100;
 }
+
+.content {
+    height: calc(100vh - 4rem);
+    margin-top: 0.5rem;
+}

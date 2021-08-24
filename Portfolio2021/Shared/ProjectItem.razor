@@ -12,58 +12,41 @@
 	return;
 }
 
-<div class="@(IsActive ? "fixed flex justify-center items-center backdrop-blur-sm bg-gray-50/40 h-full w-full z-20 top-0 left-0 cursor-pointer" : "")"
-	 @onclick="@(() => IsActive.Toggle())">
-	<section class="card overflow-hidden w-full hover:bg-white hover:shadow-xl transition @(IsActive ? "max-w-2xl mobile:max-w-md cursor-auto flex-1" : "cursor-pointer")"
-			 @onclick="Open"
-			 @onclick:stopPropagation
-			 id="project-@Model.Key">
-		<header class="card-header">
-			<div class="flex justify-between items-center">
-				<h1 class="text-left text-2xl">@Model.Title</h1>
-				@if (Model.Link is not null)
+<section class="wrapper card relative overflow-hidden w-full hover:bg-white hover:shadow-xl transition cursor-pointer"
+		 @onclick="Open"
+		 @onclick:stopPropagation
+		 id="project-@Model.Key">
+	<header class="card-header">
+		<div class="flex justify-between items-center">
+			<h1 class="text-left text-2xl">@Model.Title</h1>
+			@if (Model.Link is not null)
+			{
+				<a href="@Model.Link" target="_blank" @onclick:stopPropagation
+			   class="flex h-7 hover:bg-primary-100 hover:text-primary-800 items-center justify-center rounded-full text-black/60 text-sm w-7">
+					<i class="bi bi-box-arrow-up-right"></i>
+				</a>
+			}
+		</div>
+		<div class="flex justify-between items-center text-black/60">
+			<div class="">
+				@if (Model.Dates is not null)
 				{
-					<a href="@Model.Link" target="_blank"
-				   class="flex h-7 hover:bg-primary-100 hover:text-primary-800 items-center justify-center rounded-full text-black/60 text-sm w-7">
-						<i class="bi bi-box-arrow-up-right"></i>
-					</a>
+					<span>@(Model.Dates.ToSimpleDate())</span>
 				}
 			</div>
-			<div class="flex justify-between items-center text-black/60">
-				<div class="">
-					@if (Model.Dates is not null)
-					{
-						<span>@(Model.Dates.ToSimpleDate())</span>
-					}
-				</div>
-				<div>
-					@Model.Role
-				</div>
-			</div>
-		</header>
-		<div class="card-content">
-			<span class="inline-block leading-none">
-				@(Model.Summary ?? "")
-			</span>
-			<div class="@(IsActive ? "" : "h-28 sm:h-24") overflow-ellipsis overflow-hidden text-black/60 leading-tight relative">
-				@(Model.Description ?? "")
-				@if (IsActive)
-				{
-					<ul class="list-disc list-outside pl-[2ch] mx-0.5 mt-2">
-						@foreach (var item in Model.Highlights)
-						{
-							<li>@item</li>
-						}
-					</ul>
-				}
-				else
-				{
-					<div class="absolute w-full h-12 bottom-0 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-				}
+			<div>
+				@Model.Role
 			</div>
 		</div>
-		<div class="relative">
-			<div class="absolute bottom-0 w-full h-1.5 bg-gradient-to-r @(Model.Colors)"></div>
+	</header>
+	<div class="card-content">
+		<span class="inline-block leading-none">
+			@(Model.Summary ?? "")
+		</span>
+		<div class="h-28 sm:h-24 overflow-ellipsis overflow-hidden text-black/60 leading-tight relative">
+			@(Model.Description ?? "")
+			<div class="absolute w-full h-12 bottom-0 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
 		</div>
-	</section>
-</div>
+	</div>
+	<div class="colors absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-br @(Model.Colors) opacity-25 transition"></div>
+</section>

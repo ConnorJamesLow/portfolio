@@ -22,22 +22,16 @@ public partial class ProjectItem
     #region Parameters
     [Parameter]
     public Project? Item { get; set; }
+	#endregion
+
+	#region Injected Services
+	[Inject]
+	private NavigationManager Navigator { get; set; } = default!;
+	#endregion
+
+	#region Computed
+	public Project Model => Item ?? throw new ArgumentNullException(nameof(Item));
     #endregion
 
-    #region Computed
-    public Project Model => Item ?? throw new ArgumentNullException(nameof(Item));
-    #endregion
-
-    #region State
-    private Tog IsActive { get; set; } = new();
-    #endregion
-
-    private void Open()
-	{
-        if(IsActive)
-		{
-            return;
-		}
-        IsActive.Toggle();
-	}
+    private void Open() => Navigator.NavigateTo($"/Project/{Model.Key}");
 }

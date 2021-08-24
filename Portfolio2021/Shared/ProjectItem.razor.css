@@ -1,0 +1,4 @@
+﻿.wrapper:hover > .colors {
+    opacity: 0;
+    pointer-events: none;
+}

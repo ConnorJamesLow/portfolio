@@ -1,0 +1,54 @@
+﻿@page "/Project/{Id}"
+@page "/Projects/{Id}"
+
+@if (Model is null)
+{
+	<div>Did you enter that address yourself?</div>
+	return;
+}
+
+<article class="container max-w-2xl py-4 px-4 m-auto" id="project-@Model.Key">
+	<div class="my-4">
+		<a href="/" class="inline-flex py-2 px-4 text-xs rounded-lg border border-primary-600 text-primary-600 hover:border-primary-800 hover:text-white hover:bg-primary-800 items-center space-x-[1ch]  transition">
+			<i class="bi bi-chevron-left"></i>
+			<span>Home</span>
+		</a>
+	</div>
+	<header>
+		<div class="flex justify-between items-center">
+			<h1 class="text-left text-2xl">@Model.Title</h1>
+			@if (Model.Link is not null)
+			{
+				<a href="@Model.Link" target="_blank" @onclick:stopPropagation
+			   class="flex h-7 hover:bg-primary-100 hover:text-primary-800 items-center justify-center rounded-full text-black/60 text-sm w-7">
+					<i class="bi bi-box-arrow-up-right"></i>
+				</a>
+			}
+		</div>
+		<div class="flex justify-between items-center text-black/60">
+			<div class="">
+				@if (Model.Dates is not null)
+				{
+					<span>@(Model.Dates.ToSimpleDate())</span>
+				}
+			</div>
+			<div>
+				@Model.Role
+			</div>
+		</div>
+	</header>
+	<div>
+		<span class="inline-block leading-none">
+			@(Model.Summary ?? "")
+		</span>
+		<div class="overflow-ellipsis overflow-hidden text-black/60 leading-tight relative">
+			@(Model.Description ?? "")
+			<ul class="list-disc list-outside pl-[2ch] mx-0.5 mt-2">
+				@foreach (var item in Model.Highlights)
+				{
+					<li>@item</li>
+				}
+			</ul>
+		</div>
+	</div>
+</article>
