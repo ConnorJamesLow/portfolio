@@ -1,0 +1,123 @@
+[
+    {
+        "key": "p:moshoboga",
+        "colors": "from-purple-500 to-green-300",
+        "dates": {
+            "ongoing": true,
+            "from": "2020/12/01",
+            "to": "2021/08/01"
+        },
+        "description": "Our team (Efinity Technologies) is developing a social movie site for rating, reviewing, and recommending movies. We utilized the .NET Platform for this project, leveraging Blazor Server and SignalR for a highly interactive experience.",
+        "featured": true,
+        "highlights": [
+            "Co-architect during the initial project specification and estimate.",
+            "Primary developer responsible for ensuring all features were implemented on time.",
+            "Delegated tasks our junior team member and reviewed their code for quality.",
+            "Utilized GitHub for collaboration between developers, designers, and our client (via GitHub issues).",
+            "Added real-time features, like user-to-user chat, using SignalR."
+        ],
+        "link": "https://www.moshoboga.com",
+        "role": "Developer/Co-Architect",
+        "stack": [
+            ".NET",
+            "Blazor",
+            "TypeScript",
+            "SQL Server"
+        ],
+        "summary": "\"Movie recommendations by those who like what you like.\"",
+        "title": "Moshoboga"
+    },
+    {
+        "key": "p:pharmasalmanac",
+        "colors": "from-[#F58426] via-amber-400 to-[#04dca2]",
+        "dates": {
+            "from": "2020/06/01",
+            "to": "2021/07/01"
+        },
+        "description": "Authored several features for HubSpot hosted pharmasalmanac.com, including a custom dynamic survey linked directly to an existing API. Refactored existing endpoints for a significant performance increase.",
+        "featured": true,
+        "highlights": [
+            "Significantly increased performance of report-generation endpoints within the .NET Core API.",
+            "Extended the database and API to service new features for Pharama's Almanac in conjunction with a dynamic HTML/JS-based survey to gather said information.",
+            "In HubSpot, created new tools for administators to manage company data/surveys."
+        ],
+        "link": "https://www.pharmasalmanac.com/",
+        "role": "Lead Developer",
+        "stack": [
+            ".NET",
+            "ASP.NET Core",
+            "JavaScript",
+            "SQL Server",
+            "HubSpot"
+        ],
+        "summary": "Backend/Administrative Upgrades",
+        "title": "Pharma's Almanac Upgrades"
+    },
+    {
+        "key": "p:daa",
+        "colors": "from-black to-[#fb1e20] via-indigo-700",
+        "dates": {
+            "from": "2020/03/01",
+            "to": "2020/12/01"
+        },
+        "description": "Retrofitted an existing database with a new .NET Core API server and a secured Svelte-powered SPA.",
+        "featured": true,
+        "highlights": [],
+        "role": "Lead Developer",
+        "stack": [
+            ".NET",
+            "Svelte",
+            "TypeScript",
+            "SQL Server"
+        ],
+        "summary": "Backend-focused Website Overhaul",
+        "title": "Dramatic Artists Backend"
+    },
+    {
+        "key": "p:ifs",
+        "colors": "from-[#0069D9] to-[#032d59e6]",
+        "dates": {
+            "from": "2018/06/01",
+            "to": "2021/06/01"
+        },
+        "description": "Primary developer on a custom business-management application featuring secure logins, google-maps integration, pdf generation, email, uploading, and AJAX-powered interactivity.",
+        "featured": true,
+        "highlights": [
+            "Lead developer for an EfinityTech project.",
+            "Built a business-critical web application using ASP.NET Core MVC and JavaScript.",
+            "Implemented JWT security to compliment an asynchronous client experience made possible through RESTful Web Services.",
+            "Utilized the jQuery library to develop a responsive and interactive front-end. Developed important backend features including PDF generation and Email notifications. Managed SQL databases with Microsoft SQL Server."
+        ],
+        "role": "Lead Developer",
+        "stack": [
+            ".NET",
+            "ASP.NET MVC 5",
+            "JavaScript",
+            "SQL Server"
+        ],
+        "summary": "Business Management Web Application",
+        "title": "International Field Services"
+    },
+    {
+        "key": "p:vsm",
+        "colors": "from-blue-600 to-cyan-600",
+        "dates": {
+            "ongoing": true,
+            "from": "2018/05/01"
+        },
+        "description": "Ongoing maintenance & development of Efinity Technology's internal website management platform, built on ASP.NET (Webforms & Core).",
+        "featured": true,
+        "highlights": [
+
+        ],
+        "role": "Maintainer",
+        "stack": [
+            "ASP.NET Webforms",
+            "Vue.JS",
+            "JavaScript",
+            "SQL Server"
+        ],
+        "summary": "Proprietary Software Contributor",
+        "title": "Virtual Site Manager Upgrades"
+    }
+]

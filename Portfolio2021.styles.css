@@ -1,0 +1,22 @@
+/* /Shared/BusinessCard.razor.rz.scp.css */
+a:hover > i.reveal[b-7i9gpkq14v] {
+    opacity: 100;
+}
+/* /Shared/Featured.razor.rz.scp.css */
+section[b-vkrsxkxzbg] {
+    width: 100%;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+a:hover > i.reveal[b-7ln8zq2f70] {
+    opacity: 100;
+}
+
+.content[b-7ln8zq2f70] {
+    height: calc(100vh - 4rem);
+    margin-top: 0.5rem;
+}
+/* /Shared/ProjectItem.razor.rz.scp.css */
+.wrapper:hover > .colors[b-r1on24767c] {
+    opacity: 0;
+    pointer-events: none;
+}

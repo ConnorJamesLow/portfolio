@@ -1,0 +1,101 @@
+[
+    {
+        "key": "t:csharp",
+        "featured": true,
+        "category": "language",
+        "proficiency": "fluent",
+        "since": 2016,
+        "title": ".NET",
+        "years": 5
+    },
+    {
+        "key": "t:mssql",
+        "featured": true,
+        "category": "language",
+        "proficiency": "fluent",
+        "since": 2017,
+        "title": "SQL Server (T-SQL)",
+        "years": 4
+    },
+    {
+        "key": "t:typescript",
+        "featured": true,
+        "category": "language",
+        "proficiency": "fluent",
+        "since": 2018,
+        "title": "TypeScript",
+        "years": 3
+    },
+    {
+        "key": "t:javascript",
+        "featured": false,
+        "category": "language",
+        "proficiency": "fluent",
+        "since": 2018,
+        "title": "JavaScript",
+        "years": 3
+    },
+    {
+        "key": "t:git",
+        "featured": true,
+        "category": "tool",
+        "proficiency": "fluent",
+        "since": "2016",
+        "title": "Git",
+        "years": 5
+    },
+    {
+        "key": "t:gcp",
+        "featured": true,
+        "category": "tool",
+        "proficiency": "conversational",
+        "since": 2018,
+        "title": "Google Cloud Platform",
+        "years": 2
+    },
+    {
+        "key": "t:java",
+        "featured": false,
+        "category": "language",
+        "proficiency": "conversational",
+        "since": 2016,
+        "title": "Java",
+        "years": 3
+    },
+    {
+        "key": "t:mysql",
+        "featured": false,
+        "category": "language",
+        "proficiency": "conversational",
+        "since": 2016,
+        "title": "MySQL",
+        "years": 3
+    },
+    {
+        "key": "t:powershell",
+        "featured": false,
+        "category": "language",
+        "proficiency": "conversational",
+        "since": 2019,
+        "title": "Powershell Scripting",
+        "years": 2
+    },
+    {
+        "key": "t:mongodb",
+        "featured": false,
+        "category": "tool",
+        "proficiency": "conversational",
+        "since": 2018,
+        "title": "MongoDB",
+        "years": 2
+    },
+    {
+        "key": "t:python",
+        "featured": false,
+        "category": "language",
+        "proficiency": "academic",
+        "since": 2020,
+        "title": "Python",
+        "years": 1
+    }
+]

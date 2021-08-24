@@ -1,0 +1,32 @@
+[
+    {
+        "key": "e:efinitytech:intern",
+        "company": "Efinity Technologies",
+        "dates": {
+            "from": "2018/05/01",
+            "ongoing": false,
+            "to": "2018/08/01"
+        },
+        "role": "Internship"
+    },
+    {
+        "key": "e:efinitytech:contract",
+        "company": "Efinity Technologies",
+        "dates": {
+            "from": "2018/08/01",
+            "ongoing": false,
+            "to": "2019/11/01"
+        },
+        "role": "Contract"
+    },
+    {
+        "key": "e:efinitytech:developer",
+        "company": "Efinity Technologies",
+        "dates": {
+            "from": "2019/11/01",
+            "ongoing": true,
+            "to": null
+        },
+        "role": "Fullstack Developer"
+    }
+]
