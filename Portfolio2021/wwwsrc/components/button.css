@@ -1,0 +1,5 @@
+.button-sm {
+    @apply px-1 py-0.5 rounded text-center  
+        border border-primary-600 text-primary-600 hover:bg-primary-800 hover:border-primary-800 hover:text-white 
+        transition;
+}

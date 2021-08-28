@@ -1,0 +1,73 @@
+﻿@page "/App/Conway"
+
+<article class="">
+	<header class="card-header flex flex-col md:flex-row justify-start items-center text-xs">
+		<EditForm Model="SizeModel" class="flex flex-row justify-start items-center space-x-2"
+				  OnValidSubmit="UpdateGrid">
+			<div>
+				<label class="inline-block pl-1">Columns</label>
+				<input type="number" step="1" max="100" min="0"
+					   class="w-[8ch] px-[0.5ch] text-left bg-primary-50 rounded font-mono"
+					   @bind="SizeModel.Columns" />
+			</div>
+			<div>
+				<label class="inline-block pl-1">Rows</label>
+				<input type="number" step="1" max="100" min="0"
+					   class="w-[8ch] px-[0.5ch] text-left bg-primary-50 rounded font-mono"
+					   @bind="SizeModel.Rows" />
+			</div>
+			<button type="submit" class="button-sm">
+				Set Grid
+			</button>
+		</EditForm>
+
+		<!-- controls start -->
+		<div class="flex items-center space-x-2 mx-2">
+			<button @onclick="Playing.Toggle"
+					class="button-sm">
+				@if (Playing)
+				{
+					<span>Playing</span>
+					<i class="bi bi-play"></i>
+				}
+				else
+				{
+					<span>Paused</span>
+					<i class="bi bi-pause"></i>
+				}
+			</button>
+			<button @onclick="Step"
+					class="button-sm">
+				<span>Next gen.</span>
+				<i class="bi bi-arrow-right-short"></i>
+			</button>
+			@*<button>
+				<i class="bi bi-play"></i>
+				</button>
+				<button>
+				<i class="bi bi-skip-forward"></i>
+				</button>*@
+		</div>
+		<div class="flex items-center space-x-2 max-2">
+			<span>Generation: @Generation</span>
+			<span>Population: @Population</span>
+		</div>
+		<!-- controls end -->
+	</header>
+	<!-- grid start -->
+	<section class="conway grid justify-center">
+		@foreach (int y in Enumerable.Range(0, Grid.GetLength(1)))
+		{
+			@foreach (int x in Enumerable.Range(0, Grid.GetLength(0)))
+			{
+				bool cell = Grid[x, y];
+				<div class="conway cell bg-primary-600 border-white border @(cell ? "" : "bg-opacity-5")"
+			 @onclick="() => Toggle(x, y)">
+				</div>
+			}
+		}
+	</section>
+	<!-- grid end -->
+	@Styles
+</article>
+
